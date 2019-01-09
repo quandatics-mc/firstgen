@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_IxDY4RP2Eemc4vmzbddNgg" label="FirstGen" description="POC" language="java" technicalLabel="FIRSTGEN" creationDate="2019-01-09T17:33:07.000+0800" author="_IxDY4hP2Eemc4vmzbddNgg" productVersion="Talend Data Fabric-7.0.1.20180411_1414" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/quandatics-mc/firstgen.git&quot;,&quot;login&quot;:&quot;mc.lee@quandatics.com&quot;,&quot;passwd&quot;:&quot;NdTHPXdDWaNZKrapeL+bng==&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="MDM"/>
+  <TalendProperties:User xmi:id="_IxDY4hP2Eemc4vmzbddNgg" login="admin@company.com" firstName="matew" lastName="Tew" type="MDM" additionnalData="{}"/>
+</xmi:XMI>
