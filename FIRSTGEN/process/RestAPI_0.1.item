@@ -113,7 +113,29 @@
     <routinesParameter id="_LgKqgBP2Eemc4vmzbddNgg" name="TalendStringUtil"/>
     <routinesParameter id="_Lf3vkBP2Eemc4vmzbddNgg" name="TalendString"/>
   </parameters>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="HttpResponse&lt;String&gt; response = Unirest.post(&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;)&#10;  .header(&quot;content-type&quot;, &quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;)&#10;  .header(&quot;Authorization&quot;, &quot;Basic dGVzdDp0ZXN0,Basic YWRtaW46YWRtaW4=&quot;)&#10;  .header(&quot;cache-control&quot;, &quot;no-cache&quot;)&#10;  .header(&quot;Postman-Token&quot;, &quot;bf3ec318-9c29-4725-9fa3-7c8deb1f5e23&quot;)&#10;  .body(&quot;------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;filedata\&quot;; filename=\&quot;C:\\Users\\mc.lee\\Desktop\\DataWarehouse.pptx\&quot;\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;name\&quot;\r\n\r\nmy-file.pptx\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;relativePath\&quot;\r\n\r\n/documentLibrary/Source Data\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;overwrite\&quot;\r\n\r\ntrue\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--&quot;)&#10;  .asString();"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES"/>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1"/>
+  </node>
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_2"/>
     <elementParameter field="TEXT" name="URL" value="&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
@@ -181,7 +203,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="128">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -212,7 +234,7 @@
       <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="288">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -240,14 +262,10 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="HttpResponse&lt;String&gt; response = Unirest.post(&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;)&#10;  .header(&quot;content-type&quot;, &quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;)&#10;  .header(&quot;Authorization&quot;, &quot;Basic dGVzdDp0ZXN0,Basic YWRtaW46YWRtaW4=&quot;)&#10;  .header(&quot;cache-control&quot;, &quot;no-cache&quot;)&#10;  .header(&quot;Postman-Token&quot;, &quot;bf3ec318-9c29-4725-9fa3-7c8deb1f5e23&quot;)&#10;  .body(&quot;------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;filedata\&quot;; filename=\&quot;C:\\Users\\mc.lee\\Desktop\\DataWarehouse.pptx\&quot;\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;name\&quot;\r\n\r\nmy-file.pptx\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;relativePath\&quot;\r\n\r\n/documentLibrary/Source Data\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;overwrite\&quot;\r\n\r\ntrue\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--&quot;)&#10;  .asString();"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_1"/>
-  </node>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tRESTClient_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
   <connection connectorName="RESPONSE" label="row1" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_2" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -257,22 +275,22 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_82f77885-a783-478b-9666-b48d3d9a6382"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fNeptSjSfIo6trarytzBPU8Hpcc7RMYegbSu6HgAq8FbWMooG1VEy+yrzHF9gMLCv1HboTzS4qF8
-8MXWjw4NTA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_164a15e6-7382-41e8-ae13-8c846751737a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/FG5DgyhzQSkBv5Z0y65oOHS/U1up2qfA9KFeti3Bb26Qlj8Aa0zXii2PJjH1d+Qq2YK7tKEZ4PY
-1NAjG8GscA==</DigestValue></Reference></SignedInfo><SignatureValue>y4lQ8BnbKZIx7prJy+rxYADbZgYnTX6ZZGWAihQ4cTjMUg2GgPEMnSJJ4N31OKJ09bxFCz8MFoyd
-/IOrSSVzJHpJrpXwwj/8ldh/6NwE+0RGK0KmEf0Kc1QDlKZlkVXe6zcerGneA9OXU3IDhLdNhpaf
-5nvJy+XQN3MsiKoDsixTGeZid0dhuMwd8tEF3YqADWdvXlD7b2OCE8Io6MJlVxtvAjkBXD9E/JX7
-jFojFVwF0yCBfCLHE7v4N+sE2+9FSAkFXu+ZmcQJuAxS7U4ocxusK1/PvbQAR6JwvHbQIFyrrMjk
-ziY7+mRAWeLEQhlaq9/uRaO0VeZpM06GHFgPFA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b930c2db-4862-4acf-bc38-a6a8706c6664"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p6G4xDqVhBaDjarQhqgRyY9Bhr2/7MrqS/TsopaL3dQxCGiu7CWAehBq7n857Bu82mrYJJJIBtpM
+3YyNXLRdHQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e2bf407e-53e7-42d1-be17-10ff7f79ba05"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EvkBDRkOrMQwzSvTlh7iQUX0tD5ntWjKpqc7A8/giDY/f+vIUsTggz8EuEWKt6pREsF4y1TtgmKM
+NT5H/a07HQ==</DigestValue></Reference></SignedInfo><SignatureValue>vOKyiacqgeOEuylwN+/Lxnl/oo4KAEtDueDZbpN3e+NnfQda9t6gYLd9hYJboz8vKlmFZBV7EWOk
+qMC244yDdCs5fppfSRjw1XwCNkC4Hitw6P8/esml7wGMMnrqCh6N7WnYUXJ0jwI2Ex9FN04V9fcS
+gKfnEzOLt7fXtKLCMRSNayJzMBVhCcDjl6RV24yWthoRxoOocjsC8+8Bf4jUAIswM8Dk85cb2QPg
+qf5UqE2O+dRWAg4NFracwYQM7wCpJx803U/kP5tT2MNhFA24+HiNO0om8cZj8J1sZykmh6Rp+4za
+qRWK06894/KeVMldfy4OSLnK9M1LfZjQBhECVg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -296,4 +314,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_164a15e6-7382-41e8-ae13-8c846751737a" Target="#_82f77885-a783-478b-9666-b48d3d9a6382"><Timestamp>2019-01-10 08:49:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e2bf407e-53e7-42d1-be17-10ff7f79ba05" Target="#_b930c2db-4862-4acf-bc38-a6a8706c6664"><Timestamp>2019-01-10 08:50:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
