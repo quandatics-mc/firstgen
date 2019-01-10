@@ -24,5 +24,12 @@
   "mvn:com.cedarsoftware/json-io/4.9.9-TALEND/jar" : "mvn:com.cedarsoftware/json-io/4.9.9-TALEND/jar",
   "mvn:org.talend.daikon/daikon/0.23.0/jar" : "mvn:org.talend.daikon/daikon/0.23.0/jar",
   "mvn:javax.servlet/javax.servlet-api/3.1.0/jar" : "mvn:javax.servlet/javax.servlet-api/3.1.0/jar",
-  "mvn:net.snowflake/snowflake-jdbc/3.5.3/jar" : "mvn:net.snowflake/snowflake-jdbc/3.5.3/jar"
+  "mvn:net.snowflake/snowflake-jdbc/3.5.3/jar" : "mvn:net.snowflake/snowflake-jdbc/3.5.3/jar",
+  "mvn:org.codehaus.jackson/jackson-core-asl/1.9.14-TALEND/jar" : "mvn:org.codehaus.jackson/jackson-core-asl/1.9.14-TALEND/jar",
+  "mvn:com.fasterxml.jackson.core/jackson-core/2.9.4/jar" : "mvn:com.fasterxml.jackson.core/jackson-core/2.9.4/jar",
+  "mvn:com.fasterxml.jackson.core/jackson-databind/2.9.4/jar" : "mvn:com.fasterxml.jackson.core/jackson-databind/2.9.4/jar",
+  "mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.14-TALEND/jar" : "mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.14-TALEND/jar",
+  "mvn:org.talend.libraries/jakarta-oro-2.0.8/6.0.0/jar" : "mvn:org.talend.libraries/jakarta-oro-2.0.8/6.0.0/jar",
+  "mvn:org.talend.libraries/slf4j-log4j12-1.7.2/6.0.0/jar" : "mvn:org.talend.libraries/slf4j-log4j12-1.7.2/6.0.0/jar",
+  "mvn:org.talend.libraries/talendcsv/6.0.0/jar" : "mvn:org.talend.libraries/talendcsv/6.0.0/jar"
 }
