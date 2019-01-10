@@ -31,5 +31,10 @@
   "mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.14-TALEND/jar" : "mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.14-TALEND/jar",
   "mvn:org.talend.libraries/jakarta-oro-2.0.8/6.0.0/jar" : "mvn:org.talend.libraries/jakarta-oro-2.0.8/6.0.0/jar",
   "mvn:org.talend.libraries/slf4j-log4j12-1.7.2/6.0.0/jar" : "mvn:org.talend.libraries/slf4j-log4j12-1.7.2/6.0.0/jar",
-  "mvn:org.talend.libraries/talendcsv/6.0.0/jar" : "mvn:org.talend.libraries/talendcsv/6.0.0/jar"
+  "mvn:org.talend.libraries/talendcsv/6.0.0/jar" : "mvn:org.talend.libraries/talendcsv/6.0.0/jar",
+  "mvn:org.talend.libraries/bcprov-jdk15-146/6.0.0-SNAPSHOT/jar" : "mvn:org.talend.libraries/bcprov-jdk15-146/6.0.0-SNAPSHOT/jar",
+  "mvn:org.talend.libraries/fontbox-1.5.0/6.0.0-SNAPSHOT/jar" : "mvn:org.talend.libraries/fontbox-1.5.0/6.0.0-SNAPSHOT/jar",
+  "mvn:org.talend.libraries/pdfbox-1.5.0/6.0.0-SNAPSHOT/jar" : "mvn:org.talend.libraries/pdfbox-1.5.0/6.0.0-SNAPSHOT/jar",
+  "mvn:org.talend.libraries/icu4j-3_8_1/6.0.0-SNAPSHOT/jar" : "mvn:org.talend.libraries/icu4j-3_8_1/6.0.0-SNAPSHOT/jar",
+  "mvn:org.talend.libraries/bcmail-jdk15-146/6.0.0-SNAPSHOT/jar" : "mvn:org.talend.libraries/bcmail-jdk15-146/6.0.0-SNAPSHOT/jar"
 }
