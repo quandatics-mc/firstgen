@@ -116,12 +116,11 @@
   </parameters>
   <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_2"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
     <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/x-www-form-urlencoded"/>
-    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="application/json"/>
     <elementParameter field="TABLE" name="QUERY">
       <elementValue elementRef="NAME" value="&quot;filedata&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;C:/Users/mc.lee/Desktop/DataWarehouse.pptx&quot;"/>
@@ -151,9 +150,9 @@
     <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
     <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true"/>
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="false"/>
-    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true"/>
     <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
     <elementParameter field="TABLE" name="HEADERS"/>
     <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
@@ -182,6 +181,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="HttpResponse&lt;String&gt; response = Unirest.post(&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;)&#10;  .header(&quot;content-type&quot;, &quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;)&#10;  .header(&quot;Authorization&quot;, &quot;Basic dGVzdDp0ZXN0,Basic YWRtaW46YWRtaW4=&quot;)&#10;  .header(&quot;cache-control&quot;, &quot;no-cache&quot;)&#10;  .header(&quot;Postman-Token&quot;, &quot;bf3ec318-9c29-4725-9fa3-7c8deb1f5e23&quot;)&#10;  .body(&quot;------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;filedata\&quot;; filename=\&quot;C:\\Users\\mc.lee\\Desktop\\DataWarehouse.pptx\&quot;\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;name\&quot;\r\n\r\nmy-file.pptx\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;relativePath\&quot;\r\n\r\n/documentLibrary/Source Data\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;overwrite\&quot;\r\n\r\ntrue\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--&quot;)&#10;  .asString();"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -197,13 +197,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b56a3afa-748d-4a09-a6f8-3902c913b425"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LhOFkvO36x2ooDe9DgYG6FA32qwYA+2XFp2JUgXG/bekxLZJYVAIqDQ5sCnSgDrSPyBX41UCQdg6
-y7c0U07PBw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9743302c-ec2c-407c-bd21-151e597ded6e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NyeqeGxt7uSnVsL/wYa9SWJXuIL4k6WURD5nQsYz/WfHCpxlCngW7Ek1TiNYEIKkKRHDBAGuU8LE
-1C71t74aVA==</DigestValue></Reference></SignedInfo><SignatureValue>Swd9ipyvqGWQh1Yx9IBDVCbsvCZCURKr03sZnwlHDhHb4TXP2BFm8xY1Gnnx+7tPCMjaa/3e1/v3
-4tvVLIpOBbzUMWI5SpzEVCk8IUDpgPWjgTBUJw7d/OEtN4v6lT3MMmUEY+wnAdH4qiEltKqNFA36
-nkZ9PpLV9eWn0FazHOVsfZ5kTeF2zItJY62PbVRoSO4IUB68SVNZhQgGsdMnCMAZHWX2RdOP3NI8
-XNRyUZuZ3Lz0pEGRNX5yTGaoKf/lyCyjAf4zlem2F5kqLU2g6xxbO3hR3kMqjD93X57P907ecb7f
-7xEa5WdnZhsbzxCyOvMVy/Zl8NCO9qUadOolYg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fa8c35df-18ed-4c90-ae67-5fbfbc7b6327"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AkjKi1esfiHjsEEbliW1ELbM/X4AhDbce3iUL0KPz/Gyih7Z+5JgSrxlC6xkq8o9JyPMNG0abjY3
+GEIUf0ymJg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_40ec0e07-da22-452c-8387-1d3ade9ca706"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Co9n8m7x1YaL4etzpsfJOO/WJbTpR40HOQJE2xPa/y0a/SyQ2oFA+11i/0szxUdNZlUKpl+DfZdJ
+6NnzlDYLyw==</DigestValue></Reference></SignedInfo><SignatureValue>3xST+WzaF1vMTH1qXpwIxtpRNxrlgcFwLALH83BfGJ8i5zUbGSOiqmhJPV11h6UYAhLMImNNLLba
+SPHHl8O7V340wRlE5CVrteF6mqLax9esiB1M+SePVuZt+6p8rHoV7LeLy5Gh4HNNPk8J+dhIj0J+
+p7KJ0pFJ54viHzDNz4AJ0Mvymevp3u1whrDp0CK7SuKqHscwsf/oLcBdVuwxjRn6oK0y+hfoFEEt
+efcNyzGVKa2r6zmYn9dsIJSRtYxP5UMytoda5XN/dU3o3fM3TydpcFmiVUVqOpVu/InYv1zl9/lt
+tRlS5lqDYJcV8iKFFu4v4DMmYnQPOhKU88wKTw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -227,4 +227,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9743302c-ec2c-407c-bd21-151e597ded6e" Target="#_b56a3afa-748d-4a09-a6f8-3902c913b425"><Timestamp>2019-01-10 08:06:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_40ec0e07-da22-452c-8387-1d3ade9ca706" Target="#_fa8c35df-18ed-4c90-ae67-5fbfbc7b6327"><Timestamp>2019-01-10 08:24:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
