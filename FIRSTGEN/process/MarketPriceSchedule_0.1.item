@@ -157,19 +157,116 @@
     <elementParameter field="CHECK" name="RANDOM" show="false" value="false"/>
     <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
     <elementParameter field="CHECK" name="TRIMALL" value="false"/>
-    <elementParameter field="TABLE" name="TRIMSELECT"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DELIVERY_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DELIVERY_HOUR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REGION_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TYPE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PARTICIPANT_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RESOURCE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MW"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRICE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UNK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
     <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="SPLITRECORD" show="false" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
-    <elementParameter field="TABLE" name="DECODE_COLS" show="false"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DELIVERY_DATE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DELIVERY_HOUR"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REGION_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TYPE_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PARTICIPANT_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RESOURCE_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MW"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRICE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UNK"/>
+      <elementValue elementRef="DECODE" value="false"/>
+    </elementParameter>
     <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileInputDelimited_1"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_1">
+      <column comment="" key="false" length="-1" name="DELIVERY_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="DELIVERY_HOUR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_HOUR"/>
+      </column>
+      <column comment="" key="false" length="-1" name="REGION_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REGION_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="PARTICIPANT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PARTICIPANT_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RESOURCE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RESOURCE_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MW" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MW"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="PRICE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PRICE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="UNK" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="UNK"/>
+      </column>
+    </metadata>
     <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="DELIVERY_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" type="id_Date" usefulColumn="true">
+        <additionalField key="di.date.date" value="true"/>
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_DATE"/>
+        <additionalField key="di.column.logicalType" value="date"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="DELIVERY_HOUR" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="DELIVERY_HOUR"/>
+      </column>
+      <column comment="" key="false" length="-1" name="REGION_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="REGION_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="TYPE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="TYPE_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="PARTICIPANT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PARTICIPANT_ID"/>
+      </column>
+      <column comment="" key="false" length="-1" name="RESOURCE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="RESOURCE_ID"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="MW" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="MW"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="PRICE" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="PRICE"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="UNK" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_Double" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="UNK"/>
+      </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -249,6 +346,35 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tDBOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="REGION_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DELIVERY_HOUR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TYPE_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PARTICIPANT_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="UNK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PRICE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DELIVERY_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RESOURCE_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MW"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
@@ -257,13 +383,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4e9afa16-6594-4ba3-9066-2e6f60ff8a1f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BIJcNSy7JLiUw2QPNan1pgoBSC6AW0zOND9TbygE5ldvkbUp5ghABBVCRwbX0xQR2OBgFgkPbJ4L
-in8ass48kQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bcce60af-5369-4389-bd45-3d39984a33a2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>StoMAG6pAB+aZp2qmdLX5hFcEhgV68zVTlly6miOq3ppi2+RJXI1kevxa4IteRIwk5lJQNGNTF0F
-yfElQVX00g==</DigestValue></Reference></SignedInfo><SignatureValue>bHoc1PK7Y2bFcqRKBwHXCDWeqQa6XcyYOOZ9RX3ned2OBjIdo+JzNg3eQ4hcsuZbm9umyu2Zs+lG
-ReGNUVlq/e3+BWjFyGDJdV8YiPGAdgAJ24+FVUwLrftiHZ5hEB2j4uIBLwKlSSbYn6Mn94eSZ0FS
-XQ4yrY5aalCdnlHNVBFZv9YsbgRHGZaNgKPDHo+0+mUhdmnPpWpEm8h7O9+Si1WTW2r1W6Nv/vel
-7qbpiuEa1Gdk8XcdIIcr5kfB4bCr58v9tFN/R2j4h5PKvXFkwLz7qPm/Ek2PKnL/qBOwu41DuC7p
-1RhHBAbTVC2vtCg8qkYrsNx711m8exSd4Os/Cg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_827e6678-5a77-4504-8d3a-be059ac61ddc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tLCi6HkcTIpsfvkAqfPA7Ohdt05gvPfH+t0L2szPrUQ9tH/BMzmBcIH2xfIvytSYA7+DDIJcq+jS
+fV6kMYzX5Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_86747326-adbf-4e98-80ad-49e60b479fdc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lA2GgC0QZxKXihL40W3ed79olXur64IiXAP+/1v9DsbbaJw2NovQyzTY/vNHnXDhtFuhWr6Otxuk
+RntBVEr6rQ==</DigestValue></Reference></SignedInfo><SignatureValue>PfoFhj5qm/uWxdd8+2Pf6ThHr8yHZTLXyzAubo6YOfCE3odO6Sj5DUYyqjB5l5R1RWl9IfaZqHrq
+OwElGdGMFRYd/2HKAHnCPn7QAuYk6NALUwVpIs3l/Jl+9MZeVY1GArExQQmoGoccsyOaAF952m96
+w9btujkCFJ7xGe8DvjxEe7c1bhOygmUAn5fzQPrvHcTL8t6wKghJv/AS319yTPjY0dmjpyUr9B9I
+m6EIspq/7lazzgtKwunsI5s2Zb7uVaC9xrORqDggEWB9jIDudgvnVBOQAeZu3iYL9BPQP9DPmtGW
+mlS2HRTMIKdvXkGxj+swxCr798puZjLN7bEFAw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -287,4 +413,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bcce60af-5369-4389-bd45-3d39984a33a2" Target="#_4e9afa16-6594-4ba3-9066-2e6f60ff8a1f"><Timestamp>2019-01-10 03:59:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_86747326-adbf-4e98-80ad-49e60b479fdc" Target="#_827e6678-5a77-4504-8d3a-be059ac61ddc"><Timestamp>2019-01-10 04:10:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
