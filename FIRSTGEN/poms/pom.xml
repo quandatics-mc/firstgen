@@ -11,6 +11,7 @@
   <modules>
     <module>code/routines</module>
     <module>jobs/process/pen_datadump_0.1</module>
+    <module>jobs/process/marketpriceschedule_0.1</module>
   </modules>
   <properties>
     <talend.project.name>FIRSTGEN</talend.project.name>
