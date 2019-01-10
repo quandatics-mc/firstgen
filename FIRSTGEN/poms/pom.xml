@@ -15,6 +15,7 @@
     <module>jobs/process/marginalplants_0.1</module>
     <module>jobs/process/outageschedule_0.1</module>
     <module>jobs/process/securitylimit_0.1</module>
+    <module>jobs/process/pen_datawrite_0.1</module>
   </modules>
   <properties>
     <talend.project.name>FIRSTGEN</talend.project.name>
