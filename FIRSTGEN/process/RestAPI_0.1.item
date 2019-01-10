@@ -124,11 +124,12 @@
   </node>
   <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="URL" value="&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
     <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/x-www-form-urlencoded"/>
-    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="multipart/mixed"/>
     <elementParameter field="TABLE" name="QUERY">
       <elementValue elementRef="NAME" value="&quot;filedata&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;C:/Users/mc.lee/Desktop/DataWarehouse.pptx&quot;"/>
@@ -158,10 +159,10 @@
     <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
     <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true"/>
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="true"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" show="false" value="false"/>
     <elementParameter field="TABLE" name="HEADERS"/>
     <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
@@ -192,6 +193,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -223,6 +225,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -249,12 +252,73 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFileFetch" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileFetch_1"/>
+    <elementParameter field="CLOSED_LIST" name="PROTO" value="http"/>
+    <elementParameter field="CHECK" name="POST" value="true"/>
+    <elementParameter field="TEXT" name="URI" value="&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;"/>
+    <elementParameter field="CHECK" name="USE_CACHE" value="true"/>
+    <elementParameter field="TEXT" name="SMB_URI" show="false" value="&quot;smb://host/dir/remoteFileName.txt&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" show="false" value="&quot;C:&quot;"/>
+    <elementParameter field="CHECK" name="MAKEDIRS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FILENAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ADD_HEADER" value="true"/>
+    <elementParameter field="TABLE" name="HEADERS">
+      <elementValue elementRef="HEADER_NAME" value="&quot;content-type&quot;"/>
+      <elementValue elementRef="HEADER_VALUE" value="&quot;multipart/form-data&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="SMB_DOMAIN" show="false" value="&quot;domain&quot;"/>
+    <elementParameter field="TEXT" name="SMB_USERNAME" show="false" value="&quot;username&quot;"/>
+    <elementParameter field="PASSWORD" name="SMB_PASSWORD" show="false" value="PoLvNyVG2XWndNDdLn696A=="/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TABLE" name="COMMON_PARAMS">
+      <elementValue elementRef="COMMON_PARAMS_NAME" value="&quot;filedata&quot;"/>
+      <elementValue elementRef="COMMON_PARAMS_VALUE" value="&quot;C:/Users/mc.lee/Desktop/DataWarehouse.pptx&quot;"/>
+      <elementValue elementRef="COMMON_PARAMS_NAME" value="&quot;name&quot;"/>
+      <elementValue elementRef="COMMON_PARAMS_VALUE" value="&quot;my-file.pptx&quot;"/>
+      <elementValue elementRef="COMMON_PARAMS_NAME" value="&quot;relativePath&quot;"/>
+      <elementValue elementRef="COMMON_PARAMS_VALUE" value="&quot;/documentLibrary/Source Data&quot;"/>
+      <elementValue elementRef="COMMON_PARAMS_NAME" value="&quot;overwrite&quot;"/>
+      <elementValue elementRef="COMMON_PARAMS_VALUE" value="&quot;true&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="READ_COOKIE" value="false"/>
+    <elementParameter field="CHECK" name="SAVE_COOKIE" value="false"/>
+    <elementParameter field="FILE" name="COOKIE_DIR" show="false" value="&quot;C:/cookie&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="COOKIE_POLICY" show="false" value="DEFAULT"/>
+    <elementParameter field="CHECK" name="SINGLE_COOKIE" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENCODE_URI" value="false"/>
+    <elementParameter field="CHECK" name="PRINT" value="true"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
+    <elementParameter field="CHECK" name="UPLOAD" value="true"/>
+    <elementParameter field="TABLE" name="FILE_PARAMS">
+      <elementValue elementRef="FILE_PARAMS_NAME" value="&quot;my-file.pptx&quot;"/>
+      <elementValue elementRef="FILE_PARAMS_VALUE" value="&quot;C:/Users/mc.lee/Desktop/DataWarehouse.pptx&quot;"/>
+      <elementValue elementRef="FILE_PARAMS_CONTENT_TYPE" value="&quot;multipart/form-data&quot;"/>
+      <elementValue elementRef="FILE_PARAMS_CHARSET" value="&quot;ISO-8859-1&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;61.163.92.4&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="&quot;8080&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="CHECK" name="PROXY_NTLM" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_DOMAIN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;admin&quot;"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="XOWw2jdQq/4="/>
+    <elementParameter field="CHECK" name="REDIRECT" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_302_AS_303" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileFetch_1"/>
+  </node>
   <connection connectorName="RESPONSE" label="row1" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_2" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FAULT" label="row2" lineStyle="0" metaname="FAULT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tRESTClient_2" target="tLogRow_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
@@ -267,13 +331,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8ef4ebd5-165d-4e07-959a-535e13fc75f6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>odYzgA3kqA/7YzU/Wmc5zBTVICw516fOjFKQPUosUbVcE8Ihg2cbvneXeq7Z4CBF4sbmUxnu53vk
-Svn461FlOQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3f86e1fe-4d5c-4be4-8002-b8c909e7324f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1sQHdsbLYVg9KkbKT/f3dBarUXJ5tRa08WuJICqvFvlQcCAxOU+hI1/d+d2cgFg3QohDQyJ2Rdsq
-BiHy6Xm/mQ==</DigestValue></Reference></SignedInfo><SignatureValue>WtKjlDm4mZj9s1SYUgGVdkQG4cGLZ0wCQC7+LTiHpl1AXgtYdKo8ofCwn0R3zxzLWodAYUk67Fdv
-2xF0Zwofu4Mrmt6llLRzRP/TNCy7NOJ8ZOrwGtmTzAVNVl9eJs/9KI0spGoqt1jdwOdjeo3TVzwR
-fiiScndAChlhs/W53vJeDPPKFrnA6q0DLjODFjbobRfuabQWpKbo1UdDLSI0HGuGq5ZihdjhYRWB
-9YjN+TqvtFi1TYb9tzcHbOBosBeLVI0ZQeCnFth0y5auAG3NKn3ZmG4ge9/fQFkERD+nuxsNB8wN
-6HHFASQvjxOUejfaH8y4NftywR3UXmdRiA7mTQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileFetch_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bbe42da0-b959-42c6-8b54-95303f6f8e86"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>51XRVfmXHX2TjSYN4lG8vpL/FAGvd7iQ0Eyl2r4hc9x5nqHN5BCPZhE6+Lh2FWxNqUy4SY4dc/M/
+N/9QwRyRkw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ac3f66bb-ac12-4b72-bac8-e6ef6c5fbe09"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Aq8FQkmDeslpJB6AwV06RhXKAGlcItprxxp8FRKKosUcD2fDgH065Qpc/nJAPpF+wMSUmCjocHNu
+VetcHIcYsQ==</DigestValue></Reference></SignedInfo><SignatureValue>XnGL3WY2BhGvTfc83JcN+av4buvynRFY4sTOAX//5f7Rj2hyxsPirgoaeN7Gf9in9f9XkSRmfxP5
+7QGAhlG8z/tc/+cE0a1g/na0LDTO9AaiieGsqoeVAadxdwEh5O5EgRLlcZLAcoGy8wNT/a9cTeR1
+6Wv523sJCgGxC9uzAQHCQC6LO9YEtD51H8oemYClZCXAX39EVWO6o/W9d/zI7q3BmogBr0IR4tCf
+6BDpOyQTohqbeSeJuLo1FUJz7sEUPhncCapb/olfMd41us4Stprk2GWZ94xgez9iE/qIdH2QNDJ0
+/BUsvCWvm5XCcTj4CXzyL6xDgiSlGBl1xNjDgw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -297,4 +366,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3f86e1fe-4d5c-4be4-8002-b8c909e7324f" Target="#_8ef4ebd5-165d-4e07-959a-535e13fc75f6"><Timestamp>2019-01-10 09:02:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ac3f66bb-ac12-4b72-bac8-e6ef6c5fbe09" Target="#_bbe42da0-b959-42c6-8b54-95303f6f8e86"><Timestamp>2019-01-10 09:07:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
