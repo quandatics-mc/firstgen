@@ -128,7 +128,7 @@
     <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
     <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/x-www-form-urlencoded"/>
-    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="multipart/mixed"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="*/*"/>
     <elementParameter field="TABLE" name="QUERY">
       <elementValue elementRef="NAME" value="&quot;filedata&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;C:/Users/mc.lee/Desktop/DataWarehouse.pptx&quot;"/>
@@ -158,14 +158,11 @@
     <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
     <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" show="false" value="true"/>
     <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="true"/>
     <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" show="false" value="false"/>
-    <elementParameter field="TABLE" name="HEADERS">
-      <elementValue elementRef="NAME" value="&quot;Content-Type&quot;"/>
-      <elementValue elementRef="VALUE" value="&quot;multipart/form-data&quot;"/>
-    </elementParameter>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" value="false"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
     <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
@@ -270,13 +267,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c374b60f-2cf2-45dd-bfbd-47d82833e9b5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zbvnW0Felc9yBTYkK50BKg8Dto/VHBlGX52x4xGVtiQR1JC3huyk+4Pnv570XOpxEuvDhVXeA9Z9
-Y3uH4wOk/g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7fb478dd-650d-41f3-9b50-d50053ef1124"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Mbl/A+9URvNQEYtryM3N0CdVTvLsNUcjksOd9Jzbmi9EjI5rRSOlkDXiVnVaap3iSiraevPn/PY/
-USpkHGl+aA==</DigestValue></Reference></SignedInfo><SignatureValue>p8XxTW5ysN4PCGcpuL6DB9tRcjzFpLkeq8D+QI/qhB7nfMujuu1uz5nHll28xmPlb6yprEVSDQKu
-5r00zn9SX9/DbdLSl3r7EmZYRAQb+4Lf211k5XhQqIWgHE5PVfzNlDHE2DmFhaoS/CihOz0rLqa0
-UbOOfiXGIPVyWblQdYFvYhFEMe/sgywmjkURbF5m76Vb9DoV0ly+nKOPBpvB+fSSVt+CpkPFxrJ9
-t6AF2M3mdvWJAiHMz1LWbu7L92xny694e23waI1xZDqvXr4fKDE2JurBhhdHr3KJ/jzAphieoxwo
-l3l4xSbS67WHJ3NaEJBVX8seoUrCE98ngFTUjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8ef4ebd5-165d-4e07-959a-535e13fc75f6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>odYzgA3kqA/7YzU/Wmc5zBTVICw516fOjFKQPUosUbVcE8Ihg2cbvneXeq7Z4CBF4sbmUxnu53vk
+Svn461FlOQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3f86e1fe-4d5c-4be4-8002-b8c909e7324f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1sQHdsbLYVg9KkbKT/f3dBarUXJ5tRa08WuJICqvFvlQcCAxOU+hI1/d+d2cgFg3QohDQyJ2Rdsq
+BiHy6Xm/mQ==</DigestValue></Reference></SignedInfo><SignatureValue>WtKjlDm4mZj9s1SYUgGVdkQG4cGLZ0wCQC7+LTiHpl1AXgtYdKo8ofCwn0R3zxzLWodAYUk67Fdv
+2xF0Zwofu4Mrmt6llLRzRP/TNCy7NOJ8ZOrwGtmTzAVNVl9eJs/9KI0spGoqt1jdwOdjeo3TVzwR
+fiiScndAChlhs/W53vJeDPPKFrnA6q0DLjODFjbobRfuabQWpKbo1UdDLSI0HGuGq5ZihdjhYRWB
+9YjN+TqvtFi1TYb9tzcHbOBosBeLVI0ZQeCnFth0y5auAG3NKn3ZmG4ge9/fQFkERD+nuxsNB8wN
+6HHFASQvjxOUejfaH8y4NftywR3UXmdRiA7mTQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -300,4 +297,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7fb478dd-650d-41f3-9b50-d50053ef1124" Target="#_c374b60f-2cf2-45dd-bfbd-47d82833e9b5"><Timestamp>2019-01-10 09:00:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3f86e1fe-4d5c-4be4-8002-b8c909e7324f" Target="#_8ef4ebd5-165d-4e07-959a-535e13fc75f6"><Timestamp>2019-01-10 09:02:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
