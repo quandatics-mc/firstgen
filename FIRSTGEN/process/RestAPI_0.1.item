@@ -339,10 +339,29 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="OkHttpClient client = new OkHttpClient();&#10;&#10;MediaType mediaType = MediaType.parse(&quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;);&#10;RequestBody body = RequestBody.create(mediaType, &quot;------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;filedata\&quot;; filename=\&quot;C:\\Users\\mc.lee\\Desktop\\DataWarehouse.pptx\&quot;\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;name\&quot;\r\n\r\nmy-file.pptx\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;relativePath\&quot;\r\n\r\n/documentLibrary/Source Data\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;overwrite\&quot;\r\n\r\ntrue\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--&quot;);&#10;Request request = new Request.Builder()&#10;  .url(&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;)&#10;  .post(body)&#10;  .addHeader(&quot;content-type&quot;, &quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;)&#10;  .addHeader(&quot;Authorization&quot;, &quot;Basic dGVzdDp0ZXN0,Basic YWRtaW46YWRtaW4=&quot;)&#10;  .addHeader(&quot;cache-control&quot;, &quot;no-cache&quot;)&#10;  .addHeader(&quot;Postman-Token&quot;, &quot;2e04afeb-a954-4bc5-997f-26059b9dfba3&quot;)&#10;  .build();&#10;&#10;Response response = client.newCall(request).execute();"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="OkHttpClient client = new OkHttpClient();&#10;&#10;MediaType mediaType = MediaType.parse(&quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;);&#10;RequestBody body = RequestBody.create(mediaType, &quot;------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;filedata\&quot;; filename=\&quot;C:\\Users\\mc.lee\\Desktop\\DataWarehouse.pptx\&quot;\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;name\&quot;\r\n\r\nmy-file.pptx\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;relativePath\&quot;\r\n\r\n/documentLibrary/Source Data\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;overwrite\&quot;\r\n\r\ntrue\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--&quot;);&#10;Request request = new Request.Builder()&#10;  .url(&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;)&#10;  .post(body)&#10;  .addHeader(&quot;content-type&quot;, &quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;)&#10;  .addHeader(&quot;Authorization&quot;, &quot;Basic dGVzdDp0ZXN0,Basic YWRtaW46YWRtaW4=&quot;)&#10;  .addHeader(&quot;cache-control&quot;, &quot;no-cache&quot;)&#10;  .addHeader(&quot;Postman-Token&quot;, &quot;2e04afeb-a954-4bc5-997f-26059b9dfba3&quot;)&#10;  .build();&#10;&#10;Response response = client.newCall(request).execute();&#10;&#10;system.out.Println(Response);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;&#10;import okhttp3.MediaType;&#10;import okhttp3.OkHttpClient;&#10;import okhttp3.Request;&#10;import okhttp3.RequestBody;&#10;import okhttp3.Response;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2"/>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_3"/>
   </node>
   <node componentName="tLibraryLoad" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLibraryLoad_1"/>
@@ -367,6 +386,10 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tJava_2" offsetLabelX="0" offsetLabelY="0" source="tJava_2" target="tLogRow_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tLibraryLoad_1" offsetLabelX="0" offsetLabelY="0" source="tLibraryLoad_1" target="tLibraryLoad_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
@@ -409,13 +432,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b1ccc171-f616-434f-9c2d-52e4f40efc8c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dtzvgSlF6qAtJXZT1sIL1A6hytl8c1/vCfQSvhVWfHSqe5ST4k1Wpk3vQEXkdO2buWm6X+YIzNy3
-8r2o6vc9PA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_76c256ce-bd7e-490d-ae60-25929fb0e072"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>t0W3yNz2ccFOauCKEAm8aETUtzriUR7MHI4j7PVp0e90v2iP0Mtn8gFeg7OWtQtydphk8M/9tnz4
-J5a7JS6DFA==</DigestValue></Reference></SignedInfo><SignatureValue>b5bIgN/AfGKRZ6WXGQvlam+sZV+d7buqr3DkFHIzuM1h6j8q6inTQTYmRFuQqivfii7vCcwBKxbl
-r7Oobjrc0c1FGCSzhzOVSZb2CTSybECXk5a59jXEfbl4Of1XtHxkM6sdg5WR/CZr6OZ5F2ecumVl
-Z17n3fpH3V/1FL617R21QhBDjtwGbMP0LICwdrHkVa5xZoKlTnUiydkLyrYhk3Fgf4YBgm1ov6jJ
-EfKGUb8nWgUWSms0EYvmq6O6ew7vEPxoMRHXXBKCeBdtFui4cUOsHu10zbEEhkXoqRp3OrAgoGP3
-StdmM1Da8oNU+E/HMjNeiBtuPEFERyiHS7Ss7A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_25d9c9d2-40ab-4e85-8635-22023a220181"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>q9vgQKz16p5B+BOuWyVjPz1VB9SBGVHEkl2E4IH8SvvIWwaVVIlPJMIeqGk9wgUngKanGaOReCYb
+BafzVIo3ZQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eee42d36-c247-40a3-a8f8-68e64fb00913"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/3Zmgrn3GzRxlGWpUn6TFCo9lFJEzegP/w15/04TlcZKPHJbmka4df0vlVZABdnYpWLk3+HPPLlM
+tJg6ysIatg==</DigestValue></Reference></SignedInfo><SignatureValue>GmEoe1dAlWuUkht56wAMVkjen4MVIIWwzMWrKbTzWRc54ZakACyeJIPIFH0qL/K1S67S/L3VYC8F
+BZrLHm1mLgaHLBdfD7FpNQCfvEtnllIUo+kcC12SDw+/KS/mppoQ+fQUDRaibnOjQB1et6ImcDVp
+XKKlH0r/AJd0cSUs8cqhEpehlY9asCA9Pbs01es6FcMt7iANhSDOCLj4yFhF2cDVkiN/FNcgjylS
++MbpENa2kWztAMX+6c+98Oqsg8PBjMh1YH8AiKiB68B6yRIBKuWBxPkTlw8MS4Y2eXKbtOT0sB8a
+Johqvm0wzLU+9N7GPZWokgxCWPf8KtoTYU9eQQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -439,4 +462,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_76c256ce-bd7e-490d-ae60-25929fb0e072" Target="#_b1ccc171-f616-434f-9c2d-52e4f40efc8c"><Timestamp>2019-01-11 06:33:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eee42d36-c247-40a3-a8f8-68e64fb00913" Target="#_25d9c9d2-40ab-4e85-8635-22023a220181"><Timestamp>2019-01-11 06:42:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
