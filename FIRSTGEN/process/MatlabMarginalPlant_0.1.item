@@ -447,7 +447,7 @@
   </node>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="5"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="test"/>
@@ -457,6 +457,9 @@
     <elementParameter field="TABLE" name="INTABLE">
       <elementValue elementRef="test" value="&quot;123&quot;"/>
       <elementValue elementRef="test" value="&quot;newLine1231&quot;"/>
+      <elementValue elementRef="test" value="&quot;123123.11111&quot;"/>
+      <elementValue elementRef="test" value="&quot;-11111&quot;"/>
+      <elementValue elementRef="test" value="&quot;99999&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -472,7 +475,7 @@
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS"/>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;//java.util.regex.Pattern.compile(&quot;\\d+&quot;).matcher(input_row.test).matches()&#10;input_row.test.trim().matches(&quot;\\d&quot;)&#9;&#9;&#9;"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;//java.util.regex.Pattern.compile(&quot;\\d+&quot;).matcher(input_row.test).matches()&#10;input_row.test.trim().matches(&quot;\\d+&quot;)&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_10">
       <column comment="" key="false" length="-1" name="test" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -557,13 +560,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a9097c23-eb98-4baf-93d0-1f2d63148f31"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WaqEhx1Kvb1XfjzLefHsasz0+qZ4QCPBpPv/Pd/2x1oXRs2dkJeNi5JQV7+kQ+DVFP7YeyFIRPuL
-LtQhEwOTJA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dc8ac6ed-8cab-4f33-8bce-2ee2d1716dde"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w8Bv7Qi+j7IjJ4yop+pjPvLIoyTX4xG5st1HBl8i16Z9mrI3hXApAGoRPgXxrt6pgMFLeuVtfGHc
-JTH7a+y3Lg==</DigestValue></Reference></SignedInfo><SignatureValue>aQ9/CKxVlf7NC85XQzuLSobPFsMou4IdAwznEysSivixOBtfcYGCg8xlp/rhbcZgMUgVbbATjk6o
-pj70tVaWqADMwj03peTS8GGj0IblwTMaV4N7aO5izQpC88bvEffhS00BW0lcXPVCZvCLAmbNLeND
-QfWFqKW3piXW1c6i3iZZGdsTqF3NMGCIJR1sFhTb/rub1S0Yr96QM7z2mMPWeL4ZXX0d4jFUOz7G
-fhKpG8VhphcCJMdQlqqfUfHTL4AYBAM+D1RPZF5Lu0/WnAAAThThyS1Q7XGPuKOlfMMOxmQ8b7ij
-O6U7pAxpInGMGbDPiC9VOlIe2VPmuz52YBOYew==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_49330b4c-31e2-45c1-9358-61ee1487c45a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dpCSg5D7pVSiBJraUsrT6KvS14gNBX4Ck9pDGigzppHzgAEbL02Qrw+b7q441Gg0U5UxpRKVXyHb
+slPT/dK9dw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c9e211a4-b5f5-467d-81a1-0fc54f6c2afc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5SpWTzEt4HvzqxsvhPuz3Nx/zppt2tcV+qs1wu7ceOJi8ZW0Ale2GTPbybyXdTqBIegAlw623jHx
+osmT/6A+EA==</DigestValue></Reference></SignedInfo><SignatureValue>nxY04XItrpg+kEEmMAJq0AUrJwDOaHkfbiUkmc556fbjt814n3R5t4i9Dn0epCy1pOdiRR8cOMhq
+aZ9aKyBL+KYb2+tQTTK6rGkzYJZP+ZgxzUY446Xa9UFA6xgBGbshqzThKjTNvzKj4aEui/0S7LLA
+YFsFdGvHJYEVZeglgVCqZYW9su+jZKvX4rRmP+tnGo1aCSjDQb7m4y7bzd8t4Q0oB/4k5DCYlmEz
+22Wm0SIgoMJrrxlo41uN2Zag0776JnSjts1dzumoNxdb3QH37wuwIsG7OQRh2RoqURIn+SseFwNN
+miC+3aV3FTIIIKyWKiHO39axb/AHI2sSa7suXA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -587,4 +590,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dc8ac6ed-8cab-4f33-8bce-2ee2d1716dde" Target="#_a9097c23-eb98-4baf-93d0-1f2d63148f31"><Timestamp>2019-01-11 04:11:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c9e211a4-b5f5-467d-81a1-0fc54f6c2afc" Target="#_49330b4c-31e2-45c1-9358-61ee1487c45a"><Timestamp>2019-01-11 04:13:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
