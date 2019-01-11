@@ -1,1 +1,6 @@
-{ }
+{
+  "mvn:org.talend.libraries/okhttp-3.9.0/6.0.0-SNAPSHOT/jar" : "mvn:org.talend.libraries/okhttp-3.9.0/6.0.0-SNAPSHOT/jar",
+  "mvn:org.talend.libraries/okio-1.13.0/6.0.0-SNAPSHOT/jar" : "mvn:org.talend.libraries/okio-1.13.0/6.0.0-SNAPSHOT/jar",
+  "mvn:com.squareup.okhttp3/okhttp/3.9.0/jar" : "mvn:com.squareup.okhttp3/okhttp/3.9.0/jar",
+  "mvn:com.squareup.okio/okio/1.13.0/jar" : "mvn:com.squareup.okio/okio/1.13.0/jar"
+}
