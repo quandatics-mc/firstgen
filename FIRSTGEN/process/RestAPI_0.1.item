@@ -114,7 +114,7 @@
     <routinesParameter id="_LgKqgBP2Eemc4vmzbddNgg" name="TalendStringUtil"/>
     <routinesParameter id="_Lf3vkBP2Eemc4vmzbddNgg" name="TalendString"/>
   </parameters>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="32">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="HttpResponse&lt;String&gt; response = Unirest.post(&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;)&#10;  .header(&quot;content-type&quot;, &quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;)&#10;  .header(&quot;Authorization&quot;, &quot;Basic dGVzdDp0ZXN0,Basic YWRtaW46YWRtaW4=&quot;)&#10;  .header(&quot;cache-control&quot;, &quot;no-cache&quot;)&#10;  .header(&quot;Postman-Token&quot;, &quot;bf3ec318-9c29-4725-9fa3-7c8deb1f5e23&quot;)&#10;  .body(&quot;------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;filedata\&quot;; filename=\&quot;C:\\Users\\mc.lee\\Desktop\\DataWarehouse.pptx\&quot;\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;name\&quot;\r\n\r\nmy-file.pptx\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;relativePath\&quot;\r\n\r\n/documentLibrary/Source Data\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;overwrite\&quot;\r\n\r\ntrue\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--&quot;)&#10;  .asString();"/>
@@ -252,7 +252,7 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileFetch" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
+  <node componentName="tFileFetch" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileFetch_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="PROTO" value="http"/>
@@ -310,7 +310,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileFetch_1"/>
   </node>
-  <node componentName="tHttpRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
+  <node componentName="tHttpRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHttpRequest_1"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="URI" value="&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;"/>
@@ -339,7 +339,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="OkHttpClient client = new OkHttpClient();&#10;&#10;MediaType mediaType = MediaType.parse(&quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;);&#10;RequestBody body = RequestBody.create(mediaType, &quot;------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;filedata\&quot;; filename=\&quot;C:\\Users\\mc.lee\\Desktop\\DataWarehouse.pptx\&quot;\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;name\&quot;\r\n\r\nmy-file.pptx\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;relativePath\&quot;\r\n\r\n/documentLibrary/Source Data\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;overwrite\&quot;\r\n\r\ntrue\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--&quot;);&#10;Request request = new Request.Builder()&#10;  .url(&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;)&#10;  .post(body)&#10;  .addHeader(&quot;content-type&quot;, &quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;)&#10;  .addHeader(&quot;Authorization&quot;, &quot;Basic dGVzdDp0ZXN0,Basic YWRtaW46YWRtaW4=&quot;)&#10;  .addHeader(&quot;cache-control&quot;, &quot;no-cache&quot;)&#10;  .addHeader(&quot;Postman-Token&quot;, &quot;ea352860-23fb-455b-a478-e4d7e262ceaa&quot;)&#10;  .build();&#10;&#10;Response response = client.newCall(request).execute();"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="import okhttp3;&#10;&#10;OkHttpClient client = new OkHttpClient();&#10;&#10;MediaType mediaType = MediaType.parse(&quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;);&#10;RequestBody body = RequestBody.create(mediaType, &quot;------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;filedata\&quot;; filename=\&quot;C:\\Users\\mc.lee\\Desktop\\DataWarehouse.pptx\&quot;\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;name\&quot;\r\n\r\nmy-file.pptx\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;relativePath\&quot;\r\n\r\n/documentLibrary/Source Data\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\&quot;overwrite\&quot;\r\n\r\ntrue\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--&quot;);&#10;Request request = new Request.Builder()&#10;  .url(&quot;http://192.168.1.30:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/4e087c01-367c-4c81-86dd-4d0ff8ee0990/children&quot;)&#10;  .post(body)&#10;  .addHeader(&quot;content-type&quot;, &quot;multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW&quot;)&#10;  .addHeader(&quot;Authorization&quot;, &quot;Basic dGVzdDp0ZXN0,Basic YWRtaW46YWRtaW4=&quot;)&#10;  .addHeader(&quot;cache-control&quot;, &quot;no-cache&quot;)&#10;  .addHeader(&quot;Postman-Token&quot;, &quot;ea352860-23fb-455b-a478-e4d7e262ceaa&quot;)&#10;  .build();&#10;&#10;Response response = client.newCall(request).execute();"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2"/>
@@ -379,13 +379,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c07422d1-b76a-4035-ac43-8f9b840fac76"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zlLPkTbcfzpRuJLP1bjwwAy9B2/HqIkdkQ1QFt40Yc20J8KwR6A0LF9Dv91mfy+ehEcL0a5mGp7U
-4zSVG6RblA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_92449d06-485c-4f54-a905-c4f2bf42fc90"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Q2OY4MpdE6g2DWkQTGD5aB6j40VW854cZBB+lA+qfz0JFlWouXstYifez0NQQoucOEGUM3O8Lg3u
-iE1JHvMP6Q==</DigestValue></Reference></SignedInfo><SignatureValue>XvYSXwhayrKgIpy+6CNde2+kFzTTTkOUur7gDvg1v8a6Uvm6ZLr4WX+dYz2DaL65W1rDXpeMXsrW
-raUQ9xGjlrEEykpHU8lgAZYy+pvtfts8azgdAfnquOFFsxASxVZdc+S5R50Nx3d4q75Vecn9cTOS
-Pzwhl7nZdX4PLKxc9i3vLhdOEQNNq45NVVheuCY3UGclBMB3QqvuPfIugXe6TXjujFy3AuIGl1Mz
-iqmIm7HcrioMiwBFLVrKgt6cgIsaJO+Y/T7z3LaCDLxCAuVchKqS44UJh82AQPEH1ICDWH0BlbXd
-/Cu9E9MGM/MVyZsZH7nUrr1oC/AORgDi3aqbaA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a58b689b-fe30-4536-a243-dc1a3e68dc82"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jW+d0DkmOtjOX5Ij+yLppydoqlRVNKCHtpl2LUOxNyGqO6tdfoCrUkoi0S6WIP/ZIq225ur0tkY/
+Vo14oMaG9w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8a22e308-3ebd-4885-8f6b-bad9fe5e2567"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bO62GIkLNfTBohHswRIS7mp6b8GbIeetGIz52j/TpuBZIiT0NMojqqhB0Msgt6vOsfuGIYlD66aQ
+Zb/C0ixpDw==</DigestValue></Reference></SignedInfo><SignatureValue>zMPC4menDsV2+MD/nvJ0fIEKAx8VqxkI3HHRB5LiIIufBj74LCQc6lJIaHer4TfaVJv0pQ5GRiVN
+W5SmSa+W1waNqMbuyAcZwacpGLYjj3aQ/6A2EbP/VIrzWrffHCvAOzd+eNIAHnG9V3wU2zV6PjLL
+E/XvvK+Uv2s2fwD/97ZDOul2nukoKeJh37Ch3MOoGHtpVawrFNhGfi9tWjEX14YeIcLLymBImR6Y
+sdEUk5w+cbp157IFlCYanhI2Sa1tmKSALodvzSEuGA7XwDinljU3mVfHxaQS+VSgp2J75fKisrzI
+NuEhLEQNoaWfOBTuL/t6z8HvCuxWWe29F+sQEg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -409,4 +409,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_92449d06-485c-4f54-a905-c4f2bf42fc90" Target="#_c07422d1-b76a-4035-ac43-8f9b840fac76"><Timestamp>2019-01-11 04:44:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8a22e308-3ebd-4885-8f6b-bad9fe5e2567" Target="#_a58b689b-fe30-4536-a243-dc1a3e68dc82"><Timestamp>2019-01-11 06:04:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
